@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+<div class="container my-1">
+ <div class="row">
+  <h3 class="text-center my-5">Contact Our Admin</h3>
+  
+  <div class="col-sm-8 offset-sm-1">
+   <form action="" method="post" novalidate>
+    {% csrf_token %}
+    {% for fm in form %}
+    <div class="form-group col-lg-6 my-2">
+      {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small>
+    </div> 
+    {% endfor %} 
+    <div class="col-12 mt-3">
+<<<<<<< HEAD
+      <button type="submit" class="btn btn-success">Submit</button>
+=======
+      <button type="submit" class="btn btn-success">Submit Form</button>
+>>>>>>> c957e2a77c7c7875855b4726fd2279162d5df7da
+    </div>
+   </form>
+
+
+  </div>
+ </div>
+</div>
+{% endblock body %}
